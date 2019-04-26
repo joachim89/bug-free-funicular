@@ -1,0 +1,37 @@
+BRUKERHÅNDBOK 101:
+
+
+CMD:
+
+cd til den mappa du vil.
+
+- git init
+
+- git add .
+
+- git commit -m "useful text"
+
+
+
+// github
+
+- git remote add origin https://github.com/joachim89/bug-free-funicular
+
+- git remote -v // verifies the new remote url
+
+- git push/pull origin master //sender eller henter filer
+
+
+//heroku
+
+- heroku apps:create navn-på-ny-side
+
+- git push heroku master // sender hele greia til heroku
+
+// phonegap
+//https://build.phonegap.com/apps
+
+- legg inn link til git. repo
+- husk config.xml, icon.png
+- build.
+- profit.
