@@ -1,12 +1,14 @@
 let menuItem = 1;
 let img;
-let w = windowWidth;
-let h = windowHeight;
+let w;
+let h;
 
 function preload(){
 	img = loadImage("icon.png");
 }
 function setup(){
+	w = windowWidth;
+	h = windowHeight;
 	createCanvas(w, h);
 	//frameRate(15);
 	lines = loadStrings("highscore.txt");

@@ -28,6 +28,8 @@ cd til den mappa du vil.
 
 - git push heroku master // sender hele greia til heroku
 
+- heroku open
+
 // phonegap
 //https://build.phonegap.com/apps
 
