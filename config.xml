@@ -7,10 +7,10 @@
 
 <!-- versionCode is optional and Android only -->
   <icon src="icon.png" />
-  <name>Snak 1.0</name>
+  <name>MR APP!</name>
 
   <description>
-      Snake game
+      The app who does it all.
   </description>
 
   <author>
