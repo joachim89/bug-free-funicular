@@ -46,7 +46,7 @@ function draw(){
 		}
 		imageMode(CENTER);
 		image(img,w/2,h/2,100,100);
-		lclick(0);
+		lclick(1);
 		rclick(2);
 	}
 	if(menuItem == 2){
