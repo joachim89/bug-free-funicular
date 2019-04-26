@@ -3,10 +3,12 @@ let img;
 let w;
 let h;
 let r2p =true;
+let rotnr = 0;
 
 function preload(){
 	
 	img = loadImage("icon.png");
+	img2 = loadImage("stort.jpg")
 }
 function setup(){
 	w = windowWidth;
@@ -14,6 +16,11 @@ function setup(){
 	createCanvas(w, h);
 	//frameRate(15);	
 
+}
+function muspre(){
+	if(!mouseIsPressed){
+		r2p=true;
+	}
 }
 function draw(){
 	background(75,89,180);
@@ -32,9 +39,7 @@ function draw(){
 		}
 	}
 	if(menuItem == 2){
-		if(!mouseIsPressed){
-			r2p=true;
-		}
+		muspre(); //sjekker at knappen 
 		fill(255);
 		textAlign(CENTER);
 		text("Velkommen til denne appen.\nHer kan du finne ut alt mulig.\nog spille spill...",w/2,h/2);
@@ -70,12 +75,22 @@ function draw(){
 		fill(0,100,0);
 		rect(w/2,h/2,w-30,h-30);
 		fill(255);
-		text("this is the end.",w/2,h/2);
+		text("well, this is the end.",w/2,h/2);
+		push();
+		translate(w/2,h/4);
+		rotate(rotnr);
+		rotnr+=.1;
+		rect(0,0,20,20);
+		pop();
 		if(mouseIsPressed && r2p){
-			menuItem = 4;
+			menuItem = 5;
 			r2p = false;
 
 		}
+
+	}
+	if(menuItem==5){
+		image(img2,w/2,h/2,h*.75,h);
 	}
 
 
