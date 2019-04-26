@@ -1,6 +1,12 @@
 /* style.css */
-
 html, body {
+  overflow: hidden;
+}
+
+
+
+
+/* html, body {
   height: 100%;
 }
 
@@ -8,9 +14,9 @@ body {
   margin: 0;
   display: flex;
 
-  /* This centers our sketch horizontally. */
+  This centers our sketch horizontally. 
   justify-content: center;
 
-}
+} */
 
 /* <link rel="stylesheet" href="style.css"> */
