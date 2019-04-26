@@ -20,7 +20,7 @@ function draw(){
 	background(81,95,186);
 	if(menuItem == 1){
 		imageMode(CENTER);
-		image(car,w/2,h/2,192,192);
+		image(img,w/2,h/2,192,192);
 		if(mousePressed){
 			menuItem=2;
 		}
