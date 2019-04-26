@@ -69,6 +69,7 @@ function draw(){
 		rect(w/2,h/2,w-10,h-10);
 		fill(0,100,0);
 		rect(w/2,h/2,w-30,h-30);
+		fill(255);
 		text("this is the end.",w/2,h/2);
 		if(mouseIsPressed && r2p){
 			menuItem = 4;
