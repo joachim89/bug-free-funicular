@@ -22,6 +22,20 @@ function muspre(){
 		r2p=true;
 	}
 }
+function rclick(pg){
+	if(mouseIsPressed && r2p && mouseX > windowWidth-(windowWidth/3)){
+		menuItem = pg;
+		r2p = false;
+
+	}
+}
+function lclick(pg){
+	if(mouseIsPressed && r2p && mouseX < (windowWidth/3)){
+		menuItem = pg;
+		r2p = false;
+
+	}
+}
 function draw(){
 	background(75,89,180);
 
@@ -32,42 +46,28 @@ function draw(){
 		}
 		imageMode(CENTER);
 		image(img,w/2,h/2,100,100);
-		if(mouseIsPressed ){
-			console.log("menu 1 press");
-			r2p = false;
-			menuItem=2;
-		}
+		lclick(0);
+		rclick(2);
 	}
 	if(menuItem == 2){
-		muspre(); //sjekker at knappen 
+		muspre(); //sjekker at knappen er klar for å trykkes
 		fill(255);
 		textAlign(CENTER);
 		text("Velkommen til denne appen.\nHer kan du finne ut alt mulig.\nog spille spill...",w/2,h/2);
 		noStroke();
 		rect(0,h-(h/3),w,10);
-
-		if(mouseIsPressed && r2p){
-			menuItem = 3;
-			r2p = false;
-
-		}
+		lclick(1);
+		rclick(3);
 	}
 	if(menuItem == 3){
-		if(!mouseIsPressed){
-			r2p=true;
-		}
+		muspre(); //sjekker at knappen er klar for å trykkes
 		background(random(0,255));
 		text("THE END IS NEAR",w/2,h/2);
-		if(mouseIsPressed && r2p){
-			menuItem = 4;
-			r2p = false;
-
-		}
+		lclick(2);
+		rclick(4);
 	}
 	if(menuItem == 4){
-		if(!mouseIsPressed){
-			r2p=true;
-		}
+		muspre(); //sjekker at knappen er klar for å trykkes
 		background(0,255,0);
 		rectMode(CENTER);
 		fill(0,150,0);
@@ -82,15 +82,15 @@ function draw(){
 		rotnr+=.1;
 		rect(0,0,20,20);
 		pop();
-		if(mouseIsPressed && r2p){
-			menuItem = 5;
-			r2p = false;
-
-		}
+		lclick(3);
+		rclick(5);
 
 	}
 	if(menuItem==5){
+		muspre(); //sjekker at knappen er klar for å trykkes
 		image(img2,w/2,h/2,h*.75,h);
+		lclick(4);
+		rclick(5);
 	}
 
 
